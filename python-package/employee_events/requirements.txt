@@ -1,1 +1,6 @@
 pandas==2.2.3
+matplotlib
+pytest
+scikit-learn
+python-fasthtml
+fastcore
