@@ -1,5 +1,5 @@
 # Import any dependencies needed to execute sql queries
-from sql_execution import QueryMixin
+from .sql_execution import QueryMixin
 
 # Define a class called QueryBase
 # Use inheritance to add methods
@@ -22,7 +22,6 @@ class QueryBase(QueryMixin):
     # that receives an `id` argument
     # This method should return a pandas dataframe
     def event_counts(self, id):
-
         # QUERY 1
         # Write an SQL query that groups by `event_date`
         # and sums the number of positive and negative events

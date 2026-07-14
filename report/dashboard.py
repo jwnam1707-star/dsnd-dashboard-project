@@ -44,7 +44,8 @@ class ReportDropdown(Dropdown):
     # Ensure the method uses the same parameters
     # as the parent class method
     def component_data(self, entity_id, model):
-        
+        result = model.names()
+        print(result)
         # Using the model argument
         # call the employee_events method
         # that returns the user-type's
@@ -267,8 +268,8 @@ def home():
 # an ID of `2`. 
 # parameterize the employee ID 
 # to a string datatype
-@app.get("/employee/{id:str}")
-def employee_report(id):
+@app.get("/employee/{id}")
+def employee_report(id:str):
 
     # Call the initialized report
     # pass the ID and an instance
@@ -283,9 +284,8 @@ def employee_report(id):
 # an ID of `2`. 
 # parameterize the team ID 
 # to a string datatype
-@app.get("/team/{id:str}")
-def team_report(id):
-
+@app.get("/team/{id}")
+def team_report(id:str):
     # Call the initialized report
     # pass the id and an instance
     # of the Team SQL class as arguments
