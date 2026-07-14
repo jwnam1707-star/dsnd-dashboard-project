@@ -2,9 +2,7 @@ from fasthtml.common import *
 import matplotlib.pyplot as plt
 
 # Import QueryBase, Employee, Team from employee_events
-from employee_events.query_base import QueryBase
-from employee_events.employee import Employee
-from employee_events.team import Team
+from employee_events import QueryBase, Employee, Team
 
 # import the load_model function from the utils.py file
 from utils import load_model
@@ -44,8 +42,6 @@ class ReportDropdown(Dropdown):
     # Ensure the method uses the same parameters
     # as the parent class method
     def component_data(self, entity_id, model):
-        result = model.names()
-        print(result)
         # Using the model argument
         # call the employee_events method
         # that returns the user-type's
